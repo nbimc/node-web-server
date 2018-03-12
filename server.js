@@ -1,6 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 
+const port = process.env.PORT || 3010;
 var app = express();
 
 // adding middleware functionality
@@ -35,6 +36,6 @@ app.get('/about', (req, res) => {
 });
 
 
-app.listen(3010, () => {
-  console.log('Server is up');
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}`);
 });
